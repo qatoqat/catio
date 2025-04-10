@@ -5,7 +5,7 @@ async function loadWasm() {
         // noinspection JSFileReferences
         let wasmModule = await import('./wasm_module.js');
         let joystickModule = await import('./joystick.js');
-        await wasmModule.default('/assets/wasm/wasm_module_bg.wasm');
+        await wasmModule.default('./assets/wasm/wasm_module_bg.wasm');
         loadingElement.textContent = 'App loaded successfully!';
         setTimeout(() => loadingElement.textContent = '', 2000);
         wasmModule.setDebugMode(false);

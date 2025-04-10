@@ -269,8 +269,8 @@ export function setCameraMode(follow_direction) {
     wasm.setCameraMode(follow_direction);
 }
 
-function __wbg_adapter_18(arg0, arg1) {
-    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h97a34a0cae32c744(arg0, arg1);
+function __wbg_adapter_16(arg0, arg1) {
+    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__he577fbd7dc8ba4d5(arg0, arg1);
 }
 
 async function __wbg_load(module, imports) {
@@ -492,8 +492,8 @@ function __wbg_get_imports() {
         const ret = false;
         return ret;
     };
-    imports.wbg.__wbindgen_closure_wrapper351 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 27, __wbg_adapter_18);
+    imports.wbg.__wbindgen_closure_wrapper109 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 16, __wbg_adapter_16);
         return ret;
     };
     imports.wbg.__wbindgen_debug_string = function(arg0, arg1) {
@@ -516,9 +516,6 @@ function __wbg_get_imports() {
     imports.wbg.__wbindgen_is_undefined = function(arg0) {
         const ret = arg0 === undefined;
         return ret;
-    };
-    imports.wbg.__wbindgen_rethrow = function(arg0) {
-        throw arg0;
     };
     imports.wbg.__wbindgen_throw = function(arg0, arg1) {
         throw new Error(getStringFromWasm0(arg0, arg1));
