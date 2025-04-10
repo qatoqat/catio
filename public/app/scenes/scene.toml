@@ -1,0 +1,5 @@
+[scene]
+name = "hello world"
+
+[assets]
+cat = "entity.toml"

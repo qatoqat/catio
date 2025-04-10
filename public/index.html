@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌱</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="app-container">
+    <div id="canvas-frame">
+        <canvas id="wasm-canvas" width="800" height="400"></canvas>
+    </div>
+    <div id="app-panel">
+        <span> 🌱 || [ ⇧ Shift + ] ( W A S D | ↑ ↓ ← → ) || </span>
+        <button id="fs-button">Full Screen</button>
+    </div>
+    <div id="loading">Loading app...</div>
+</div>
+
+<!--suppress HtmlUnknownTarget -->
+<script type="module" src="assets/js/wasm_module.js"></script>
+<script type="module" src="assets/js/joystick.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+</body>
+</html>

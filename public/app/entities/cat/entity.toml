@@ -1,0 +1,50 @@
+[info]
+author = "catio"
+version = "1.0"
+url = "https://catio.com/entities/characters/"
+signature = "SOME_HASH_VALUE"
+license = "CC0"
+
+
+[entity]
+id = "default_cat" # must be unique, else it will override existing entity loaded
+name = "Default cat" # to be shown as name or label
+#position = { x = 50, y = 50 } # entity level position. can overriden later in scene setup
+center = { x = 0, y = -8 } # offset from ground, y-axis upward is negative
+move_speed = 0.04 # calculation is performed in milliseconds
+sprint_multiplier = 2.0 # run speed = move_speed x sprint_multiplier  
+physics_body = { x = -8, y = -16, w = 16, h = 16 }
+# note on physics_body: xy - offset from ground, wh - entity size, also used for collision
+
+[sprites]
+idle = "idle.png"
+walk = "walk.png"
+run = "run.png"
+
+[actions.idle]
+sprite_name = "idle"
+frames = [{ w = 48, h = 48, offset_x = -24, offset_y = -32 }] 
+
+[actions.move]
+sprite_name = "walk"
+is_looping = true
+frames = [
+    { x = 0, y = 0, w = 48, h = 48, offset_x = -24, offset_y = -32, duration_ms = 100 },
+    { x = 48, y = 0, w = 48, h = 48, offset_x = -24, offset_y = -32, duration_ms = 100 },
+    { x = 96, y = 0, w = 48, h = 48, offset_x = -24, offset_y = -32, duration_ms = 100 },
+    { x = 144, y = 0, w = 48, h = 48, offset_x = -24, offset_y = -32, duration_ms = 100 },
+]
+
+[actions.sprint]
+sprite_name = "run"
+is_looping = true
+# alternatively, use the following setup:
+frame_defaults = { w = 48, h = 48, offset_x = -24, offset_y = -32, duration_ms = 80 }
+frame_increments = { x = 48 }
+# which is equivalent to this setup:
+#frames = [
+#    { x = 0, y = 0, w = 48, h = 48, offset_x = -24, offset_y = -32, duration_ms = 80 },
+#    { x = 48, y = 0, w = 48, h = 48, offset_x = -24, offset_y = -32, duration_ms = 80 },
+#    { x = 96, y = 0, w = 48, h = 48, offset_x = -24, offset_y = -32, duration_ms = 80 },
+#    { x = 144, y = 0, w = 48, h = 48, offset_x = -24, offset_y = -32, duration_ms = 80 },
+#]

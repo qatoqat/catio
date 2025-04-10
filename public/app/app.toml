@@ -1,0 +1,11 @@
+[app]
+name = "catio"
+version = "0.1.0"
+
+[canvas]
+id = "wasm-canvas"
+
+
+[init]
+ui = "loading.toml"
+scene = "scene.toml"
